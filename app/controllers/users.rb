@@ -42,7 +42,7 @@ class BookmarkManager < Sinatra::Base
     if User.first.update(password: params[:password], password_confirmation: params[:password_confirmation])
       redirect "/sessions/new"
     else
-      flash.now[:errors] = user.errors.full_messages
+      flash.now[:errors] = ['Password does not match the confirmation']
       erb :'users/reset_password'
     end
   end
