@@ -1,4 +1,4 @@
-<h1> Links </h1>
+<h1> Current links: </h1>
 
 <ul id = 'links'>
   <% @links.each do |link| %>
@@ -6,7 +6,7 @@
       Title: <%= link.title %>
       URL:   <%= link.url   %>
       Tags: <% link.tags.each do |tag|%>
-        <%= tag.name %> | 
+        <%= tag.name %> |
       <% end %>
     </li>
   <% end %>
